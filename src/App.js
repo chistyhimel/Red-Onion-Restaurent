@@ -1,25 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext, useState} from "react";
+import Navbar from "./Components/Navbar/Navbar";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./Components/Home/Home";
+import FoodDetails from "./Components/FoodDetails/FoodDetails";
+import Login from "./Components/Login/Login";
+import DeliveryDetails from "./Components/DeliveryDetails/DeliveryDetails";
+import OrderPlaced from "./Components/OrderPlaced/OrderPlaced";
+
+export const UserContext = createContext()
 
 function App() {
+  const [user,setUser] = useState([]);
+  const [addfoodItems,setAddFoodItems] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={{value:[user,setUser], value2:[addfoodItems,setAddFoodItems]}}>
+    <Router>
+      <Navbar className=""></Navbar>
+
+      <Switch>
+        <Route path="/home">
+          <Home></Home>
+        </Route>
+
+        <Route path="/foodDetails/:foodName">
+          <FoodDetails></FoodDetails>
+        </Route>
+
+        <Route path="/login">
+          <Login></Login>
+        </Route>
+
+        <Route path="/deliveryDetails">
+          <DeliveryDetails></DeliveryDetails>
+        </Route>
+
+        <Route path="/orderPlaced">
+          <OrderPlaced></OrderPlaced>
+        </Route>
+
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+
+        <Route path="*"></Route>
+      </Switch>
+    </Router>
+    </UserContext.Provider>
   );
 }
 

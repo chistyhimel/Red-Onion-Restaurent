@@ -1,0 +1,17 @@
+.banner{
+    height: 80vh;
+    width:100%;
+    background-image: url(../../Img/bannerbackground.png);
+    position: relative;
+}
+.banner-box{
+    margin: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    height: 200px;
+    max-width: 620px;
+    /* border: 1px solid #ccc; */
+}
