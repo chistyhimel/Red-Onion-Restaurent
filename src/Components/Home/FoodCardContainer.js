@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
 import fakeData from "../FakeData/index";
 import FoodCard from "./FoodCard";
+import "./Home.css"
 
 const FoodCardContainer = () => {
   const { value, value2 } = useContext(UserContext);
@@ -19,7 +20,7 @@ const FoodCardContainer = () => {
 
   return (
     <div className="mb-lg-5">
-      <ul className="nav justify-content-center mb-lg-3">
+      <ul className="nav justify-content-center mb-lg-3 food-category">
         <li className="nav-item">
           <h4 className="nav-link " onClick={() => setFoodCards("breakfast")}>
             Breakfast

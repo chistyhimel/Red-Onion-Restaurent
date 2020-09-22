@@ -3,6 +3,7 @@ import Logo from "../../Img/logo2.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 import { UserContext } from "../../App";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const {value,value2} = useContext(UserContext)
@@ -11,7 +12,10 @@ const Navbar = () => {
       <nav class="navbar navbar-expand-lg navbar-light bg-light" fixed-top>
         <div className="container">
         <a class="navbar-brand" href="#">
-        <img src={Logo} width="170"  alt=""/>
+          <Link to="/home">
+          <img src={Logo} width="170"  alt=""/>
+          </Link>
+        
         </a>
         <button
           class="navbar-toggler"
@@ -29,12 +33,14 @@ const Navbar = () => {
             
             <li class="nav-item mr-md-4">
               <a class="nav-link" href="#">
-                <FontAwesomeIcon icon={faShoppingCart} size="2x"></FontAwesomeIcon>
+                <Link to="/deliveryDetails">
+                <FontAwesomeIcon icon={faShoppingCart} size="2x" className="text-dark"></FontAwesomeIcon>
+                </Link>
               </a>
             </li>
             {
               addfoodItems.length > 0 &&  <li class="nav-item mr-md-4">
-              <a class="nav-link" href="#">
+              <a class="nav-link font-weight-bold text-danger" href="#">
                {addfoodItems.length}
               </a>
             </li>

@@ -55,12 +55,12 @@ const FoodDetails = () => {
 
           </div>
 
-          <button className="btn btn-danger btn-lg" onClick={()=>handleAddToCart(foodItem)}>
+          <button className="btn btn-danger btn-lg mt-3" onClick={()=>handleAddToCart(foodItem)}>
             Add <FontAwesomeIcon icon={faShoppingCart} />
           </button>
 
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 ">
           <img src={foodItem.img} alt="" className="img-fluid" />
         </div>
       </div>

@@ -1,36 +1,28 @@
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../../App";
+
 
 const DeliveryItemsCard = (props) => {
-  const { img, name, price,quantity } = props.data;
+  const { img, name, price,quantity,id } = props.data;
+const {handleRemoveItem} = props.removeItem;
+
+
   return (
-    <div class="card mb-3" style={{ maxWidth: "540px" }}>
+    <div class="card mb-2" style={{ maxWidth: "540px" }}>
+
       <div class="row no-gutters">
-        <div class="col-3">
-          <img src={img} class="card-img" alt="..." />
+        <div class="col-5 p-2">
+          <img src={img} class="img-fluid" alt="..." style={{width: "120px"}} />
         </div>
-        <div class="col-9 py-2">
-          <p class="card-title">{name}</p>
-          <div className="row">
-            <div className="col-md-5">
+        <div class="col-6 py-2">
+          <p class="d-inline">{name} × {quantity}x </p>
               <h5 className="text-danger">$ {price}</h5>
-            </div>
-            <div className="col-md-7">
-              <button class="btn">-</button>
-
-              <input
-                type="text"
-                className="form-control d-inline"
-                value={quantity}
-                min="0"
-                style={{ width: "35px", height: "35px" }}
-              />
-
-              <button class="btn">+</button>
-            </div>
-          </div>
           <small>Delivery fee</small>
+        </div>
+        <div className="col-1">
+        <h2 class="d-inline font-weight-bold md-h1" onClick={()=>props.removeItem(id)}>×</h2>
         </div>
       </div>
     </div>
