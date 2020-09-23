@@ -7,7 +7,7 @@ const BreakFastData = [
         shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium perferendis optio dignissimos esse expedita, quis et corporis placeat omnis error!",
         price: 6.99,
-        img: "https://i.ibb.co/3M6DWMR/breakfast1.png",
+        img: "https://i.ibb.co/dPNzcR4/breakfast1.png",
         category:"breakfast"
     },
     {
@@ -16,7 +16,7 @@ const BreakFastData = [
         shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium perferendis optio dignissimos esse expedita, quis et corporis placeat omnis error!",
         price: 9.99,
-        img: "https://i.ibb.co/KzKBcDH/breakfast2.png",
+        img: "https://i.ibb.co/7Cr2Bdk/breakfast2.png",
         category:"breakfast"
     },
     {
@@ -25,7 +25,7 @@ const BreakFastData = [
         shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium perferendis optio dignissimos esse expedita, quis et corporis placeat omnis error!",
         price: 6.99,
-        img: "https://i.ibb.co/vxGt0f8/breakfast3.png",
+        img: "https://i.ibb.co/GsBhDV8/breakfast3.png",
         category:"breakfast"
     },
     {
@@ -34,7 +34,7 @@ const BreakFastData = [
         shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium perferendis optio dignissimos esse expedita, quis et corporis placeat omnis error!",
         price: 8.99,
-        img: "https://i.ibb.co/f99hjnF/breakfast4.png",
+        img: "https://i.ibb.co/8BhXCW3/breakfast4.png",
         category:"breakfast"
     },
     {
@@ -43,7 +43,7 @@ const BreakFastData = [
         shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium perferendis optio dignissimos esse expedita, quis et corporis placeat omnis error!",
         price: 19.99,
-        img: "https://i.ibb.co/5kDc0b5/breakfast5.png",
+        img: "https://i.ibb.co/Z1x7Yyn/breakfast5.png",
         category:"breakfast"
     },
     {
@@ -52,7 +52,7 @@ const BreakFastData = [
         shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium perferendis optio dignissimos esse expedita, quis et corporis placeat omnis error!",
         price: 3.99,
-        img: "https://i.ibb.co/9TzgB3B/breakfast6.png",
+        img: "https://i.ibb.co/XX8TxLX/breakfast6.png",
         category:"breakfast"
     },
 ]

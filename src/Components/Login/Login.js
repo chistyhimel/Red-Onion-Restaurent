@@ -197,12 +197,12 @@ const Login = () => {
         {newUser ? (
           <p className="d-block text-center">
             already have an account?{" "}
-            <span onClick={() => setNewUser(!newUser)}>Login</span>
+            <span className="text-danger" style={{cursor:'pointer'}} onClick={() => setNewUser(!newUser)}>Login</span>
           </p>
         ) : (
           <p className="d-block text-center">
             Don't have an account?{" "}
-            <span onClick={() => setNewUser(!newUser)}>Sign in</span>
+            <span className="text-danger" style={{cursor:'pointer'}} onClick={() => setNewUser(!newUser)}>Sign in</span>
           </p>
         )}
 

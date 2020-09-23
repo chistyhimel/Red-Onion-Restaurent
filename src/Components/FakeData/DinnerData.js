@@ -5,7 +5,7 @@ const DinnerData = [
         shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium perferendis optio dignissimos esse expedita, quis et corporis placeat omnis error!",
         price: 9.99,
-        img: "https://i.ibb.co/QMFSDbf/dinner1.png",
+        img: "https://i.ibb.co/fN4W39p/dinner1.png",
         category:"dinner"
     },
     {
@@ -14,7 +14,7 @@ const DinnerData = [
         shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium perferendis optio dignissimos esse expedita, quis et corporis placeat omnis error!",
         price: 10.99,
-        img: "https://i.ibb.co/xKkDzCx/dinner2.png",
+        img: "https://i.ibb.co/hfSZrLZ/dinner2.png",
         category:"dinner"
     },
     {
@@ -23,7 +23,7 @@ const DinnerData = [
         shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium perferendis optio dignissimos esse expedita, quis et corporis placeat omnis error!",
         price: 12.99,
-        img: "https://i.ibb.co/qR1RzC1/dinner3.png",
+        img: "https://i.ibb.co/bX8cyJb/dinner3.png",
         category:"dinner"
     },
     {
@@ -32,7 +32,7 @@ const DinnerData = [
         shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium perferendis optio dignissimos esse expedita, quis et corporis placeat omnis error!",
         price: 8.99,
-        img: "https://i.ibb.co/rcLJg7x/dinner4.png",
+        img: "https://i.ibb.co/KzdJw8W/dinner4.png",
         category:"dinner"
     },
     {
@@ -41,7 +41,7 @@ const DinnerData = [
         shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium perferendis optio dignissimos esse expedita, quis et corporis placeat omnis error!",
         price: 6.99,
-        img: "https://i.ibb.co/HpZYdRB/dinner5.png",
+        img: "https://i.ibb.co/dWBQC8X/dinner5.png",
         category:"dinner"
     },
     {
@@ -50,7 +50,7 @@ const DinnerData = [
         shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium perferendis optio dignissimos esse expedita, quis et corporis placeat omnis error!",
         price: 9.99,
-        img: "https://i.ibb.co/nscY8tJ/dinner6.png",
+        img: "https://i.ibb.co/s9WfPR4/dinner6.png",
         category:"dinner"
     },
 ]
