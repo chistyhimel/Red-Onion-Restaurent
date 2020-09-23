@@ -6,6 +6,7 @@ import FoodDetails from "./Components/FoodDetails/FoodDetails";
 import Login from "./Components/Login/Login";
 import DeliveryDetails from "./Components/DeliveryDetails/DeliveryDetails";
 import OrderPlaced from "./Components/OrderPlaced/OrderPlaced";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 export const UserContext = createContext()
 
@@ -30,9 +31,9 @@ function App() {
           <Login></Login>
         </Route>
 
-        <Route path="/deliveryDetails">
+        <PrivateRoute path="/deliveryDetails">
           <DeliveryDetails></DeliveryDetails>
-        </Route>
+        </PrivateRoute>
 
         <Route path="/orderPlaced">
           <OrderPlaced></OrderPlaced>

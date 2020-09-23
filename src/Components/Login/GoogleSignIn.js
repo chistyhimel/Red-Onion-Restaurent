@@ -10,21 +10,8 @@ firebase.initializeApp(firebaseConfig)
 const GoogleSignIn = () => {
     const { value, value2 } = useContext(UserContext);
     const [loggedInUser,setLoggedInUser] = value;
-    let provider = new firebase.auth.GoogleAuthProvider();
-    const handleGoogleSignIn =()=>{
-        firebase.auth().signInWithPopup(provider).then(function(result) {
-            var token = result.credential.accessToken;
-            const {displayName,email}= result.user;
-            const signedInUser = {name:displayName,email:email,loggedIn:true}
-            setLoggedInUser(signedInUser)
-           
-          }).catch(function(error) {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            var email = error.email;
-            var credential = error.credential;
-          });
-    }
+    
+
     console.log(loggedInUser)
   return (
     <div>
