@@ -20,7 +20,7 @@ const FoodCardContainer = () => {
 
   return (
     <div className="mb-lg-5">
-      <ul className="nav justify-content-center mb-lg-3 food-category">
+      <ul className="nav justify-content-center mb-3 food-category">
         <li className="nav-item">
           <h4 className="nav-link " onClick={() => setFoodCards("breakfast")}>
             Breakfast
@@ -32,7 +32,7 @@ const FoodCardContainer = () => {
           </h4>
         </li>
         <li className="nav-item">
-          <h4 className="nav-link " onClick={() => setFoodCards("dinner")}>
+          <h4 className="nav-link" onClick={() => setFoodCards("dinner")}>
             Dinner
           </h4>
         </li>

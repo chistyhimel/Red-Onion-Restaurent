@@ -10,10 +10,10 @@ import OrderPlaced from "./Components/OrderPlaced/OrderPlaced";
 export const UserContext = createContext()
 
 function App() {
-  const [user,setUser] = useState([]);
+  const [loggedInUser,setLoggedInUser] = useState({});
   const [addfoodItems,setAddFoodItems] = useState([]);
   return (
-    <UserContext.Provider value={{value:[user,setUser], value2:[addfoodItems,setAddFoodItems]}}>
+    <UserContext.Provider value={{value:[loggedInUser,setLoggedInUser], value2:[addfoodItems,setAddFoodItems]}}>
     <Router>
       <Navbar className=""></Navbar>
 

@@ -30,7 +30,7 @@ const DeliveryDetails = () => {
           <h3>Edit Delivery Details</h3>
           <hr />
 
-          <form>
+          <form className="mb-2">
             <div class="form-group">
               <input
                 type="text"

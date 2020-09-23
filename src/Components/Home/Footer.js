@@ -1,5 +1,4 @@
 import React from "react";
-import "./Footer.css";
 import footerLogo from "../../Img/logo.png";
 const Footer = () => {
   return (
@@ -7,7 +6,7 @@ const Footer = () => {
       <div className="container">
         <div className="row pt-md-5">
           <div className="col-md-6">
-            <img src={footerLogo} alt="" style={{ height: "70px" }} />
+            <img src={footerLogo} alt="" style={{ height: "70px" }} className="m-3"/>
           </div>
           <div className="col-md-3">
             <ul className="text-light" style={{ listStyle: "none" }}>
