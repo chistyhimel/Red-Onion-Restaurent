@@ -20,6 +20,10 @@
  border-bottom: 3px solid #C82333;
  transition: 0.1s
 }
+.food-card:hover {
+    box-shadow: 0 11px 11px 0 rgba(0, 0, 0,.16);
+    transform: translateY(-5px);
+  }
 @media only screen and (max-width: 768px) {
     .banner-title{
         font-size: 30px;

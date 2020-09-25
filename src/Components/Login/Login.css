@@ -1,12 +1,10 @@
 .login-container{
     background-image: url(../../Img/signup-background.png);
-    height: 90vh;
+    height: 100vh;
     position: relative;
 }
 .login-box{
     margin: auto;
-    
-
     height: 600px;
     max-width: 500px;
     /* border: 1px solid #ccc; */

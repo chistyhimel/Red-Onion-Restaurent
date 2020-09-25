@@ -18,7 +18,7 @@ const Login = () => {
     password: "",
     email: "",
     success: false,
-    error:""
+    error: "",
   });
   let history = useHistory();
   let location = useLocation();
@@ -41,16 +41,15 @@ const Login = () => {
         setLoggedInUser(signedInUser);
         console.log(loggedInUser);
         history.replace(from);
-
       })
       .catch(function (error) {
         var errorCode = error.code;
         var errorMessage = error.message;
         var email = error.email;
         var credential = error.credential;
-        const newUserInfo = {...userInfo}
+        const newUserInfo = { ...userInfo };
         newUserInfo.error = errorMessage;
-        setUserInfo(newUserInfo)
+        setUserInfo(newUserInfo);
       });
   };
 
@@ -65,6 +64,7 @@ const Login = () => {
       const passwordContainsNumber = /\d{1}/.test(e.target.value);
       isFormValid = isPasswordValid && passwordContainsNumber;
     }
+
     if (isFormValid) {
       const newUserInfo = { ...userInfo };
       newUserInfo[e.target.name] = e.target.value;
@@ -78,16 +78,16 @@ const Login = () => {
         .auth()
         .createUserWithEmailAndPassword(userInfo.email, userInfo.password)
         .then((response) => {
-          updateUserName(userInfo.name)
-          const {displayName,email} = response.user
-          console.log(response.user.displayName)
+          updateUserName(userInfo.name);
+          const { displayName, email } = response.user;
+          console.log(response.user.displayName);
           const signedInUser = {
-            name: userInfo.name, 
+            name: userInfo.name,
             email: email,
             loggedIn: true,
           };
-          setLoggedInUser(signedInUser)
-          const newUserInfo = {...userInfo}
+          setLoggedInUser(signedInUser);
+          const newUserInfo = { ...userInfo };
           newUserInfo.success = true;
           newUserInfo.error = "";
           setUserInfo(newUserInfo);
@@ -96,33 +96,32 @@ const Login = () => {
         .catch(function (error) {
           var errorCode = error.code;
           var errorMessage = error.message;
-          const newUserInfo = {...userInfo}
+          const newUserInfo = { ...userInfo };
           newUserInfo.success = false;
           newUserInfo.error = errorMessage;
-          setUserInfo(newUserInfo)
-          
+          setUserInfo(newUserInfo);
         });
       if (!newUser && userInfo.email && userInfo.password) {
         firebase
           .auth()
           .signInWithEmailAndPassword(userInfo.email, userInfo.password)
           .then((response) => {
-            const {displayName,email} = response.user
-          const signedInUser = {
-            name: displayName,
-            email: email,  
-            loggedIn: true,
-          };
-          setLoggedInUser(signedInUser)
-          history.replace(from);
+            const { displayName, email } = response.user;
+            const signedInUser = {
+              name: displayName,
+              email: email,
+              loggedIn: true,
+            };
+            setLoggedInUser(signedInUser);
+            history.replace(from);
           })
           .catch(function (error) {
             var errorCode = error.code;
             var errorMessage = error.message;
-            const newUserInfo = {...userInfo}
+            const newUserInfo = { ...userInfo };
             newUserInfo.success = false;
             newUserInfo.error = errorMessage;
-            setUserInfo(newUserInfo)
+            setUserInfo(newUserInfo);
           });
       }
     }
@@ -133,13 +132,13 @@ const Login = () => {
     const user = firebase.auth().currentUser;
     user
       .updateProfile({
-        displayName: name
+        displayName: name,
       })
       .then(function () {
-        console.log("Youser name updated")
+        console.log("Youser name updated");
       })
       .catch(function (error) {
-       console.log(error)
+        console.log(error);
       });
   };
   return (
@@ -147,7 +146,7 @@ const Login = () => {
       <img
         src={loginLogout}
         alt=""
-        className="rounded mx-auto my-5 d-block img-fluid"
+        className="rounded mx-auto mb-5 pt-3 d-block img-fluid"
         style={{ height: "80px" }}
       />
 
@@ -185,33 +184,59 @@ const Login = () => {
               name="password"
               onBlur={handleBlur}
             />
+            {newUser && <small className="text-warning">Password should be more than six characters & must contain a number</small>}
           </div>
+          {/* {newUser && (
+            <div class="form-group">
+              <label for="exampleInputPassword2">Confirm Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword2"
+                name="password2"
+                onBlur={handleBlur}
+              />
+            </div>
+          )} */}
 
           <button type="submit" class="btn btn-danger form-control btn-lg">
             {newUser ? "Sign in" : "Log in"}
           </button>
         </form>
-        {
-          userInfo.success ? " " : <small className="d-block text-center text-danger">{userInfo.error}</small>
-        }
+        {userInfo.success ? (
+          " "
+        ) : (
+          <small className="d-block text-center text-danger">
+            {userInfo.error}
+          </small>
+        )}
         {newUser ? (
           <p className="d-block text-center">
             already have an account?{" "}
-            <span className="text-danger" style={{cursor:'pointer'}} onClick={() => setNewUser(!newUser)}>Login</span>
+            <span
+              className="text-danger"
+              style={{ cursor: "pointer" }}
+              onClick={() => setNewUser(!newUser)}
+            >
+              Login
+            </span>
           </p>
         ) : (
           <p className="d-block text-center">
             Don't have an account?{" "}
-            <span className="text-danger" style={{cursor:'pointer'}} onClick={() => setNewUser(!newUser)}>Sign in</span>
+            <span
+              className="text-danger"
+              style={{ cursor: "pointer" }}
+              onClick={() => setNewUser(!newUser)}
+            >
+              Sign in
+            </span>
           </p>
         )}
 
-        <p className="d-block text-center">or</p>
+        <p className="d-block text-center">--- or ---</p>
 
-        <button
-          className="btn btn-primary btn-block"
-          onClick={handleGoogleSignIn}
-        >
+        <button className="btn btn-dark btn-block" onClick={handleGoogleSignIn}>
           Sign in with Google
         </button>
       </div>
