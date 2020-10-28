@@ -15,10 +15,18 @@ A single page responsive web app where user can select food item and review sele
 
   <br/>
 
-### Technology : <br/>
+### Technologies : <br/>
 
 - HTML
 - CSS
 - React Js
 - React Bootstrap
 - Firebase Authentication.
+  <br/>
+  <br/>
+
+> ### [Resume]('https://drive.google.com/file/d/1d6OfaYXPL4u8YPYlBqk1Iay-Vf7Bh8jJ/view?usp=sharing')
+
+<br/>
+
+> ### [Linkedin]("https://www.linkedin.com/in/chistyhimel/")
