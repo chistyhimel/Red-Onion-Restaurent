@@ -1,4 +1,4 @@
-# Doctors Portal
+# Red Onion Restaurant
 
 A single page responsive web app where user can select food item and review selected and procced checkout by providing delivery informations. <br/>
 
