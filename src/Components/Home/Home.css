@@ -1,41 +1,71 @@
-.banner{
-    height: 80vh;
-    width:100%;
-    background-image: url(../../Img/bannerbackground.png);
-    position: relative;
+.banner {
+  height: 80vh;
+  width: 100%;
+  background-image: url(../../Img/bannerbackground.png);
+  position: relative;
+  font-family: "Poppins", sans-serif;
 }
-.banner-box{
+.banner-box {
+  margin: auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  height: 200px;
+  max-width: 850px;
+  /* border: 1px solid #ccc; */
+}
+.banner-title {
+  font-size: 50px;
+  font-weight: 500;
+}
+.search-box {
+  width: 550px;
+  margin: 30px auto;
+}
+.search-box input {
+  border-radius: 100px 0px 0px 100px !important;
+  outline: none !important;
+  border: none !important;
+}
+.search-box span {
+  border-radius: 100px !important;
+  margin-left: -50px;
+}
+
+/* Food card container */
+
+.food-category h4:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #c82333;
+  transition: 0.1s;
+}
+.food-card:hover {
+  box-shadow: 0 11px 11px 0 rgba(0, 0, 0, 0.16);
+  transform: translateY(-5px);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .banner-title {
+    font-size: 30px;
+  }
+  .banner-box {
     margin: auto;
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
     top: 0;
-    height: 200px;
-    max-width: 620px;
+
     /* border: 1px solid #ccc; */
-}
-.food-category li:hover{
- cursor: pointer;
- border-bottom: 3px solid #C82333;
- transition: 0.1s
-}
-.food-card:hover {
-    box-shadow: 0 11px 11px 0 rgba(0, 0, 0,.16);
-    transform: translateY(-5px);
   }
-@media only screen and (max-width: 768px) {
-    .banner-title{
-        font-size: 30px;
-    }
-    .banner-box{
-        margin: auto;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        top: 0;
-      
-        /* border: 1px solid #ccc; */
-    }
+  .search-box {
+    width: 100%;
+    margin: 30px auto;
+    padding: 0px 5px;
+    
   }
+}
